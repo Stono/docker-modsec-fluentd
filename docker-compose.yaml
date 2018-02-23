@@ -1,0 +1,12 @@
+version: '3.2'
+services:
+  app:
+    build: . 
+    restart: always
+    environment:
+      ES_HOSTS: 
+      ES_USERNAME: 
+      ES_PASSWORD:
+    volumes:
+      - ./config:/home/fluent/config
+      - ./fluentd-modsecurity:/var/lib/gems/2.3.0/gems/fluent-plugin-modsecurity-0.2/
